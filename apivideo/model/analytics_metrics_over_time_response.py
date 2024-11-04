@@ -113,7 +113,7 @@ class AnalyticsMetricsOverTimeResponse(ModelNormal):
 
         Args:
             context (AnalyticsMetricsOverTimeResponseContext):
-            data ([AnalyticsMetricsOverTimeResponseData]): Returns an array of metrics and the timestamps .
+            data ([AnalyticsMetricsOverTimeResponseData]): Returns an array of metrics and the timestamps.
             pagination (Pagination):
 
         Keyword Args:

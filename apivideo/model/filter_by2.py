@@ -92,6 +92,7 @@ class FilterBy2(ModelNormal):
             'operating_system': ([str],),  # noqa: E501
             'browser': ([str],),  # noqa: E501
             'tag': (str,),  # noqa: E501
+            'referrer': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -108,6 +109,7 @@ class FilterBy2(ModelNormal):
         'operating_system': 'operatingSystem',  # noqa: E501
         'browser': 'browser',  # noqa: E501
         'tag': 'tag',  # noqa: E501
+        'referrer': 'referrer',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -164,6 +166,7 @@ class FilterBy2(ModelNormal):
             operating_system ([str]): Returns analytics based on the operating system used by the viewers. Response values can include `windows`, `mac osx`, `android`, `ios`, `linux`.. [optional]  # noqa: E501
             browser ([str]): Returns analytics based on the browser used by the viewers. Response values can include `chrome`, `firefox`, `edge`, `opera`.. [optional]  # noqa: E501
             tag (str): Returns analytics for videos using this tag. This filter only accepts a single value and is case sensitive. Read more about tagging your videos [here](https://docs.api.video/vod/tags-metadata).. [optional]  # noqa: E501
+            referrer ([str]): Filters data based on the URL where the view is originating from. This filter parameter accepts an empty string to filter view events where no referrer is available.  - The API filters for exact matches. Include the trailing `/` characters if needed. - The URLs you add must be URL encoded.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
