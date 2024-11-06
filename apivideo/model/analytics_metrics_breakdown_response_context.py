@@ -61,6 +61,19 @@ class AnalyticsMetricsBreakdownResponseContext(ModelNormal):
             'START': "start",
             'END': "end",
             'IMPRESSION': "impression",
+            'CCV-AVERAGE': "ccv-average",
+            'CCV-PEAK': "ccv-peak",
+            'UNIQUE-CCV-AVERAGE': "unique-ccv-average",
+            'UNIQUE-CCV-PEAK': "unique-ccv-peak",
+            'VIEW-3': "view-3",
+            'VIEW-5': "view-5",
+            'VIEW-10': "view-10",
+            'VIEW-30': "view-30",
+            'UNIQUE-VIEW': "unique-view",
+            'UNIQUE-VIEW-3': "unique-view-3",
+            'UNIQUE-VIEW-5': "unique-view-5",
+            'UNIQUE-VIEW-10': "unique-view-10",
+            'UNIQUE-VIEW-30': "unique-view-30",
         },
         ('breakdown',): {
             'MEDIA-ID': "media-id",
@@ -154,7 +167,7 @@ class AnalyticsMetricsBreakdownResponseContext(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            metric (str): Returns the metric you selected.. [optional]  # noqa: E501
+            metric (str): Returns the metric and relevant parameters you selected.. [optional]  # noqa: E501
             breakdown (str): Returns the dimension you selected.. [optional]  # noqa: E501
             timeframe (AnalyticsAggregatedMetricsResponseContextTimeframe): [optional]  # noqa: E501
         """

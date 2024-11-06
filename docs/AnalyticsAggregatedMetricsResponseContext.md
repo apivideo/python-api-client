@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metric** | **str** | Returns the metric you selected. | [optional] 
+**metric** | **str** | Returns the metric and relevant parameters you selected. | [optional] 
 **aggregation** | **str** | Returns the aggregation you selected. | [optional] 
 **timeframe** | [**AnalyticsAggregatedMetricsResponseContextTimeframe**](AnalyticsAggregatedMetricsResponseContextTimeframe.md) |  | [optional] 
 
