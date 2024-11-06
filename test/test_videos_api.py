@@ -84,6 +84,9 @@ class TestVideosApi(MainTest):
         language="fr",
         transcript=True,
         transcript_summary=True,
+        transcript_summary_attributes=[
+            "abstract",
+        ],
     ),
             }
             url = '/videos'.format(**kwargs)
@@ -204,6 +207,9 @@ class TestVideosApi(MainTest):
         language="fr",
         transcript=True,
         transcript_summary=True,
+        transcript_summary_attributes=[
+            "abstract",
+        ],
     ),
             }
             url = '/videos/{video_id}'.format(**kwargs)

@@ -10,7 +10,7 @@ import pathlib
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "api.video"
-VERSION = "1.4.6"
+VERSION = "1.4.7"
 # To install the library, run the following
 #
 # python setup.py install

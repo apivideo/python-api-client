@@ -73,6 +73,9 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
         language="fr",
         transcript=True,
         transcript_summary=True,
+        transcript_summary_attributes=[
+            "abstract",
+        ],
     ) # VideoCreationPayload | video to create
 
     # example passing only required values which don't have defaults set
@@ -428,6 +431,9 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
         language="fr",
         transcript=True,
         transcript_summary=True,
+        transcript_summary_attributes=[
+            "abstract",
+        ],
     ) # VideoUpdatePayload | 
 
     # example passing only required values which don't have defaults set
