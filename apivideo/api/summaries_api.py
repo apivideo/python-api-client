@@ -43,7 +43,7 @@ class SummariesApi(_EndPoint):
         ):
             """Generate video summary  # noqa: E501
 
-            Generate a title, abstract, and key takeaways for a video.  # noqa: E501
+            Generate an abstract and key takeaways for a video.  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
@@ -171,7 +171,7 @@ class SummariesApi(_EndPoint):
         ):
             """Update summary details  # noqa: E501
 
-            Update details for a summary. Note that this operation is only allowed for summary objects where `sourceStatus` is `missing`.  # noqa: E501
+            Update details for a summary.  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 

@@ -54,6 +54,10 @@ class SummaryCreationPayload(ModelNormal):
         ('origin',): {
             'AUTO': "auto",
         },
+        ('attributes',): {
+            'ABSTRACT': "abstract",
+            'TAKEAWAYS': "takeaways",
+        },
     }
 
     validations = {
@@ -76,6 +80,7 @@ class SummaryCreationPayload(ModelNormal):
         return {
             'video_id': (str,),  # noqa: E501
             'origin': (str,),  # noqa: E501
+            'attributes': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -86,6 +91,7 @@ class SummaryCreationPayload(ModelNormal):
     attribute_map = {
         'video_id': 'videoId',  # noqa: E501
         'origin': 'origin',  # noqa: E501
+        'attributes': 'attributes',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -138,6 +144,7 @@ class SummaryCreationPayload(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             origin (str): Use this parameter to define how the API generates the summary. The only allowed value is `auto`, which means that the API generates a summary automatically.  If you do not set this parameter, **the API will not generate a summary automatically**.  In this case, `sourceStatus` will return `missing`, and you have to manually add a summary using the `PATCH /summaries/{summaryId}/source` endpoint operation.. [optional] if omitted the server will use the default value of "auto"  # noqa: E501
+            attributes ([str]): Use this parameter to define the elements of a summary that you want to generate. If you do not define this parameter, the API generates a full summary with all attributes.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

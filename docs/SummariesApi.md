@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Generate video summary
 
-Generate a title, abstract, and key takeaways for a video.
+Generate an abstract and key takeaways for a video.
 
 ### Example
 
@@ -35,6 +35,9 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
     summary_creation_payload = SummaryCreationPayload(
         video_id="vi4k0jvEUuaTdRAEjQ4Jfrgz",
         origin="auto",
+        attributes=[
+            "abstract",
+        ],
     ) # SummaryCreationPayload | 
 
     # example passing only required values which don't have defaults set
@@ -77,7 +80,7 @@ Name | Type | Description  | Notes
 
 Update summary details
 
-Update details for a summary. Note that this operation is only allowed for summary objects where `sourceStatus` is `missing`.
+Update details for a summary.
 
 ### Example
 
@@ -95,7 +98,6 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
     api_instance = summaries_api.SummariesApi(api_client)
     summary_id = "summary_1CGHWuXjhxmeH4WiZ51234" # str | The unique identifier of the summary source you want to update.
     summary_update_payload = SummaryUpdatePayload(
-        title="A short lecture on quantum theory",
         abstract="In this lecture, we discuss how complicated quantum theory is, using the famous example of Schrödingers cat. We also discuss practical applications like quantum computing.",
         takeaways=["Quantum theory is complicated.","Schrödinger's cat is neither dead, nor alive.","Quantum computers are super cool."],
     ) # SummaryUpdatePayload | 

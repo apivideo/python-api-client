@@ -51,6 +51,9 @@ class TestSummariesApi(MainTest):
                 'summary_creation_payload': SummaryCreationPayload(
         video_id="vi4k0jvEUuaTdRAEjQ4Jfrgz",
         origin="auto",
+        attributes=[
+            "abstract",
+        ],
     ),
             }
             url = '/summaries'.format(**kwargs)

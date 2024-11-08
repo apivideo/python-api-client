@@ -74,7 +74,6 @@ class SummaryUpdatePayload(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'title': (str,),  # noqa: E501
             'abstract': (str,),  # noqa: E501
             'takeaways': ([str],),  # noqa: E501
         }
@@ -85,7 +84,6 @@ class SummaryUpdatePayload(ModelNormal):
 
 
     attribute_map = {
-        'title': 'title',  # noqa: E501
         'abstract': 'abstract',  # noqa: E501
         'takeaways': 'takeaways',  # noqa: E501
     }
@@ -136,7 +134,6 @@ class SummaryUpdatePayload(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            title (str): A video title, based on the contents of the video.. [optional]  # noqa: E501
             abstract (str): A short outline of the contents of the video.. [optional]  # noqa: E501
             takeaways ([str]): A list of 3 key points from the video, in chronological order.. [optional]  # noqa: E501
         """
