@@ -51,6 +51,14 @@ class Webhook(ModelNormal):
     """
 
     allowed_values = {
+        ('events',): {
+            'LIVE-STREAM.BROADCAST.STARTED': "live-stream.broadcast.started",
+            'LIVE-STREAM.BROADCAST.ENDED': "live-stream.broadcast.ended",
+            'VIDEO.SOURCE.RECORDED': "video.source.recorded",
+            'VIDEO.ENCODING.QUALITY.COMPLETED': "video.encoding.quality.completed",
+            'VIDEO.CAPTION.GENERATED': "video.caption.generated",
+            'VIDEO.SUMMARY.GENERATED': "video.summary.generated",
+        },
     }
 
     validations = {

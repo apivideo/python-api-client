@@ -51,6 +51,14 @@ class WebhooksCreationPayload(ModelNormal):
     """
 
     allowed_values = {
+        ('events',): {
+            'LIVE-STREAM.BROADCAST.STARTED': "live-stream.broadcast.started",
+            'LIVE-STREAM.BROADCAST.ENDED': "live-stream.broadcast.ended",
+            'VIDEO.SOURCE.RECORDED': "video.source.recorded",
+            'VIDEO.ENCODING.QUALITY.COMPLETED': "video.encoding.quality.completed",
+            'VIDEO.CAPTION.GENERATED': "video.caption.generated",
+            'VIDEO.SUMMARY.GENERATED': "video.summary.generated",
+        },
     }
 
     validations = {
@@ -101,7 +109,7 @@ class WebhooksCreationPayload(ModelNormal):
         """WebhooksCreationPayload - a model defined in OpenAPI
 
         Args:
-            events ([str]): A list of the webhooks that you are subscribing to. There are Currently four webhook options: * ```video.encoding.quality.completed```  Occurs when a new video is uploaded into your account, it will be encoded into several different HLS and mp4 qualities. When each version is encoded, your webhook will get a notification.  It will look like ```{ \\\"type\\\": \\\"video.encoding.quality.completed\\\", \\\"emittedAt\\\": \\\"2021-01-29T16:46:25.217+01:00\\\", \\\"videoId\\\": \\\"viXXXXXXXX\\\", \\\"encoding\\\": \\\"hls\\\", \\\"quality\\\": \\\"720p\\\"} ```. This request says that the 720p HLS encoding was completed. * ```live-stream.broadcast.started```  When a live stream begins broadcasting, the broadcasting parameter changes from false to true, and this webhook fires. * ```live-stream.broadcast.ended```  This event fires when a live stream has finished broadcasting. * ```video.source.recorded```  Occurs when a live stream is recorded and submitted for encoding.
+            events ([str]): An array of webhook events that you want to subscribe to.
             url (str): The the url to which HTTP notifications are sent. It could be any http or https URL.
 
         Keyword Args:
