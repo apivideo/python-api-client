@@ -43,6 +43,7 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
     api_instance = videos_api.VideosApi(api_client)
     video_creation_payload = VideoCreationPayload(
         title="Maths video",
+        subtitle="This is a great subtitle.",
         description="A video about string theory.",
         source="https://www.myvideo.url.com/video.mp4 OR vi4k0jvEUuaTdRAEjQ4JfOyl",
         public=True,
