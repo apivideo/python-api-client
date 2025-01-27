@@ -54,6 +54,7 @@ class TestVideosApi(MainTest):
             kwargs = {
                 'video_creation_payload': VideoCreationPayload(
         title="Maths video",
+        subtitle="A great subtitle.",
         description="A video about string theory.",
         source="https://www.myvideo.url.com/video.mp4 OR vi4k0jvEUuaTdRAEjQ4JfOyl",
         public=True,
