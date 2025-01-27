@@ -121,6 +121,7 @@ class VideoCreationPayload(ModelNormal):
         lazy_import()
         return {
             'title': (str,),  # noqa: E501
+            'subtitle': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'source': (str,),  # noqa: E501
             'public': (bool,),  # noqa: E501
@@ -144,6 +145,7 @@ class VideoCreationPayload(ModelNormal):
 
     attribute_map = {
         'title': 'title',  # noqa: E501
+        'subtitle': 'subtitle',  # noqa: E501
         'description': 'description',  # noqa: E501
         'source': 'source',  # noqa: E501
         'public': 'public',  # noqa: E501
@@ -209,6 +211,7 @@ class VideoCreationPayload(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            subtitle (str): A subtitle for your video.. [optional]  # noqa: E501
             description (str): A brief description of your video.. [optional]  # noqa: E501
             source (str): You can either add a video already on the web, by entering the URL of the video, or you can also enter the `videoId` of one of the videos you already have on your api.video acccount, and this will generate a copy of your video. Creating a copy of a video can be especially useful if you want to keep your original video and trim or apply a watermark onto the copy you would create.. [optional]  # noqa: E501
             public (bool): Default: True. If set to `false` the video will become private. More information on private videos can be found [here](https://docs.api.video/delivery/video-privacy-access-management). [optional] if omitted the server will use the default value of True  # noqa: E501
